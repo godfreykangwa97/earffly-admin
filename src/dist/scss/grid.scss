@@ -1,0 +1,76 @@
+.space-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inline-flex{
+  display: inline-flex;
+  gap: 12px;
+}
+.g-1{
+  display: grid;
+  grid-template-columns: 100%;
+ // align-items: center;
+}
+
+.g-2{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  //align-items: center;
+}
+
+.g-3{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  //align-items: center;
+}
+
+.g-4{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  align-items: center;
+}
+
+.g-5{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 2rem;
+  //align-items: center;
+}
+.g-graph{
+  display: grid;
+  grid-template-columns: 60% auto;
+  grid-gap: 2rem;
+  //align-items: center;
+  grid-auto-columns: unset;
+  grid-auto-rows: unset;
+}
+
+.tr-grid{
+  display: grid;
+  grid-template-columns: 60% auto;
+  grid-gap: 2rem;
+  //align-items: center;
+  grid-auto-columns: unset;
+  grid-auto-rows: unset;
+  height: max-content;
+}
+
+.u-grid{
+  display: grid;
+  grid-template-columns: 65% auto;
+  grid-gap: 2rem;
+  //align-items: center;
+  grid-auto-columns: unset;
+  grid-auto-rows: unset;
+  height: max-content;
+}
+
+.gap-12{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

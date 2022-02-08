@@ -1,0 +1,18 @@
+:root{
+  --light: #ffffff;
+  --dark: #000000;
+  --main: #ffb600;
+  --bg: #f9f9f9;
+}
+
+.text-main{
+  color: var(--main);
+}
+
+.text-muted{
+  color: var(--bg);
+}
+
+.bg-light{
+  background: var(--light);
+}
