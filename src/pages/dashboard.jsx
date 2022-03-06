@@ -1,4 +1,5 @@
 import React from "react";
+
 import {Link} from "react-router-dom";
 import BigChart from "../data/big-chart";
 import BrowserData from "../data/browser-usage-data";

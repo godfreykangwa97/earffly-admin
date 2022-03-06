@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 import {Link} from 'react-router-dom';
 
+
 const CreateMusic = () => {
     const [images, setImages] = useState([]);
     const [imagesURLs, setImagesURLs] = useState([]);
@@ -15,6 +16,11 @@ const CreateMusic = () => {
     function onImageChange(e) {
         setImages([...e.target.files]);
     }
+
+
+
+
+
     return (
         <div className="create-music">
             <div className="opening-nav inline-flex">
@@ -27,12 +33,12 @@ const CreateMusic = () => {
                 <Link to="/monitor/music"><i className="fas fa-arrow-left"/><span>Back</span></Link>
             </div>
 
-            <form action="" className="upload-form m-t-2">
+            <form  className="upload-form m-t-2">
                 <div className="g-2">
                     <label htmlFor="cover">
                         <div className="cover">
                             {imagesURLs.map(imageSrc => <img src={imageSrc} alt=""/>)}
-                            <input type="file" accept="images/*" onChange={onImageChange} id="cover" hidden/>
+                            <input type="file" accept="images/*" onChange={onImageChange}  id="cover" hidden/>
                             <h4 className="text-main">Cover</h4>
                         </div>
                     </label>

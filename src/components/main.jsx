@@ -17,13 +17,15 @@ import Chats from "../pages/chat/chat";
 
 
 
+
+
 const Main = () => {
     return (
         <main className="main">
             <Header/>
            <div className="main-contents  p-s-2">
                <Switch>
-                   <Route exact path="/" component={Dashboard}>
+                   <Route exact path="/dashboard" component={Dashboard}>
                       <Dashboard/>
                    </Route>
                    <Route exact  path="/create/blog" component={CreateBlog}>

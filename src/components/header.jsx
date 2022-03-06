@@ -1,5 +1,10 @@
-import React, {useRef} from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState, useRef } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+
+import { auth, db, logout } from "../services/firebase";
+import { query, collection, getDocs, where } from "firebase/firestore";
+
+import { Link, useLocation } from 'react-router-dom';
 import UserImg from '../assets/img/photo_2021-11-11_08-27-42.jpg';
 
 
@@ -54,7 +59,9 @@ const Header = () => {
     clickOutsideNOT(not_content_el, not_toggle_el);
     clickOutsideUSER(user_content_el, user_toggle_el);
 
+
     return (
+
         <header className="header">
            <div className="header-holder space-between">
                <i className="fas fa-align-left"/>
@@ -136,14 +143,16 @@ const Header = () => {
                        <div  ref={user_content_el} className="dropdown-menu">
                            <div className="drop-user-info">
                                <h1>Godfrey Kangwa</h1>
-                               <p>Master</p>
+                               <p>master</p>
                            </div>
                            <div className="dropdown-list">
                                <Link to=""><i className="fas fa-envelope"/><span>Message</span></Link>
                                <Link to=""><i className="fas fa-user-circle"/><span>Account</span></Link>
                                <Link to=""><i className="fas fa-cog"/><span>Settings</span></Link>
                                <Link to=""><i className="fas fa-shield"/><span>Create user</span></Link>
-                               <Link to=""><i className="fas fa-power-off"/><span>Logout</span></Link>
+                               <button className="icon-btn" onClick="">
+                                   <i className="fas fa-power-off"/><span>Logout</span>
+                               </button>
                            </div>
                        </div>
                    </div>
