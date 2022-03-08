@@ -142,13 +142,13 @@ const Header = () => {
                        </button>
                        <div  ref={user_content_el} className="dropdown-menu">
                            <div className="drop-user-info">
-                               <h1>Godfrey Kangwa</h1>
+                               <h1><Link to="/account">Godfrey Kangwa</Link></h1>
                                <p>master</p>
                            </div>
                            <div className="dropdown-list">
                                <Link to=""><i className="fas fa-envelope"/><span>Message</span></Link>
-                               <Link to=""><i className="fas fa-user-circle"/><span>Account</span></Link>
-                               <Link to=""><i className="fas fa-cog"/><span>Settings</span></Link>
+                               <Link to="/account"><i className="fas fa-user-circle"/><span>Account</span></Link>
+                               <Link to="/account/settings"><i className="fas fa-cog"/><span>Settings</span></Link>
                                <Link to=""><i className="fas fa-shield"/><span>Create user</span></Link>
                                <button className="icon-btn" onClick="">
                                    <i className="fas fa-power-off"/><span>Logout</span>

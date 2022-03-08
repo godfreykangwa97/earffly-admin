@@ -1,6 +1,10 @@
 .btn{
   padding: .5rem 1rem;
 }
+.bordered-btn{
+  border: 1px var(--main) solid;
+  color: var(--main);
+}
 .submit-btn{
   border: none;
   border-radius: 5px;

@@ -1,27 +1,20 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import {Link} from 'react-router-dom';
 import User from '../../assets/img/photo_2021-11-11_08-27-42.jpg';
-const clickOutsideRef = (chat_ref, open_ref) =>{
-    document.addEventListener("click", (e) => {
-        if(open_ref.current && open_ref.current.contains(e.target)){
-            chat_ref.current.classList.toggle('open');
-        } else {
-            if (chat_ref.current && !chat_ref.current.contains(e.target)){
-                chat_ref.current.classList.remove('open');
-            }
-        }
-    });
-};
+
 const FloatingChat = () => {
 
-    const chat_toggle_el = useRef(null);
-    const chat_content_el = useRef(null);
 
-    clickOutsideRef(chat_content_el, chat_toggle_el);
+
+    const [isActive, setActive] = useState("false");
+
+    const handleToggle = () => {
+        setActive(!isActive);
+    };
 
     return (
         <div className="floating-chat">
-            <div ref={chat_content_el} className="floating-chat-holder">
+            <div  className={`floating-chat-holder ${isActive ? "" : "open"}`}>
                <div className="chat-heading">
                    <h4>Chat</h4>
                    <span>
@@ -74,7 +67,7 @@ const FloatingChat = () => {
                 </div>
                 <div className="chat-body"></div>
             </div>
-            <button ref={chat_toggle_el}><i className="fas fa-comment-alt"/></button>
+            <button onClick={handleToggle}><i className="fas fa-comment-alt"/></button>
         </div>
     );
 };

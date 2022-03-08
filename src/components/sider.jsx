@@ -10,7 +10,7 @@ const  Sidebar = () => {
            </div>
             <div className="sidebar-user-bar inline-flex">
                 <div className="avatar">
-                   <Link to=""><img src={UserImg} className="sidebar-avatar" alt="username"/></Link>
+                   <Link to="/account"><img src={UserImg} className="sidebar-avatar" alt="username"/></Link>
                 </div>
                 <div className="sidebar-name">
                     <h4>Name</h4>

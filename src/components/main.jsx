@@ -1,5 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+
+
 import Header from "./header";
 
 import Dashboard from "../pages/dashboard";
@@ -14,9 +16,8 @@ import CreateArtist from "../pages/create/artist";
 import CreateMusic from "../pages/create/music";
 //apps
 import Chats from "../pages/chat/chat";
-
-
-
+import UploadAlbum from "../pages/upload/album/album";
+import Account from "../pages/profile/account";
 
 
 const Main = () => {
@@ -26,32 +27,49 @@ const Main = () => {
            <div className="main-contents  p-s-2">
                <Switch>
                    <Route exact path="/dashboard" component={Dashboard}>
-                      <Dashboard/>
+                       <Dashboard/>
                    </Route>
+
                    <Route exact  path="/create/blog" component={CreateBlog}>
                        <CreateBlog/>
                    </Route>
+
                    <Route exact path="/monitor/blog" component={Blog}>
                        <Blog/>
                    </Route>
+
                    <Route exact path="/create/artist" components={CreateArtist}>
                        <CreateArtist/>
                    </Route>
+
                    <Route exact path="/create/music" components={CreateMusic}>
                        <CreateMusic/>
                    </Route>
+
                    <Route exact path="/monitor/performance" components={Performance}>
                        <Performance/>
                    </Route>
+
                    <Route exact path="/monitor/artists" components={Artists}>
                        <Artists/>
                    </Route>
+
                    <Route exact path="/chat/chat" components={Chats}>
                        <Chats/>
                    </Route>
+
                    <Route exact path="/monitor/songs" components={Songs}>
                        <Songs/>
                    </Route>
+
+                   <Route exact path="/upload/album" components={UploadAlbum}>
+                       <UploadAlbum/>
+                   </Route>
+
+                   <Route exact path="/account" components={Account}>
+                       <Account/>
+                   </Route>
+
                </Switch>
            </div>
         </main>
